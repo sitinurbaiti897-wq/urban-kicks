@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - URBAN KICKS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --magenta: #191d87;
+            --magenta-dark: #191d87;
+            --cream: #f2f3fd;
+            --cream-dark: #191d87;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--cream);
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--magenta) !important;
+        }
+
+        .nav-link:hover {
+            color: var(--magenta) !important;
+        }
+
+        .banner {
+            background: linear-gradient(to right, var(--cream-dark), var(--cream));
+            padding: 70px 0;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px #f2f3fd;
+            transition: .3s;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--magenta);
+        }
+
+        .btn-urbankicks {
+            background: var(--magenta);
+            color: white;
+            border: none;
+        }
+
+        .btn-urbankicks:hover {
+            background: var(--magenta-dark);
+            color: white;
+        }
+
+        .badge-sale {
+            background: var(--magenta);
+            padding: 8px 12px;
+        }
+
+        footer {
+            background: var(--magenta);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                URBAN KICKS
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-medium">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tentang.html">Tentang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="katalog.html">Katalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bayar.html">Bayar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontak.html">Kontak</a>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- BANNER -->
+
+    <section class="banner text-center">
+
+        <div class="container">
+
+            <h1>Katalog Sneakers</h1>
+
+            <p class="lead">
+                Temukan koleksi sneakers original terbaik di URBAN KICKS.
+            </p>
+
+            <div class="search-box mt-4">
+
+                <input type="text" id="search" class="form-control" placeholder="Cari produk..." onkeyup="cariProduk()">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUK -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row g-4" id="produkContainer">
+
+                <!-- PRODUK 1 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/adidas7.avif">
+
+                        <div class="card-body">
+                            <span class="badge badge-sale text-white mb-2">
+                                Best Seller
+                            </span>
+
+                            <h5>Adidas Handball Spezial Green</h5>
+
+                            <p class="price">
+                                Rp2.299.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Korean Dress')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 2 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/adidas5.avif">
+
+                        <div class="card-body">
+                            <h5>Adidas Handball Spezial Pink</h5>
+
+                            <p class="price">
+                                Rp2.299.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Oversized Shirt')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 3 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/adidas4.avif">
+
+                        <div class="card-body">
+                            <h5>Adidas Handball Spezial Black</h5>
+
+                            <p class="price">
+                                Rp2.299.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Casual Outfit')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 4 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/adidas6.avif">
+
+                        <div class="card-body">
+                            <h5>Adidas Handball Spezial Blue</h5>
+
+                            <p class="price">
+                                Rp2.299.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Blazer Wanita')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 5 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/NB.jpeg">
+
+                        <div class="card-body">
+                            <h5>New Balance MR530</h5>
+
+                            <p class="price">
+                                Rp1.999.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('T-Shirt Premium')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 6 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/NB1.webp">
+
+                        <div class="card-body">
+                            <h5>New Balance MR530</h5>
+
+                            <p class="price">
+                                Rp1.999.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('High Waist Jeans')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 7 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/NB4.webp">
+
+                        <div class="card-body">
+                            <h5>New Balance 574</h5>
+
+                            <p class="price">
+                                Rp2.199.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Long Cardigan')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/NB5.webp">
+
+                        <div class="card-body">
+                            <h5>New Balance 1906</h5>
+
+                            <p class="price">
+                                Rp2.799.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+<!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/WMNS+AIR+JORDAN+1+LOW.avif">
+
+                        <div class="card-body">
+                            <h5>Air Jordan 1 Low</h5>
+
+                            <p class="price">
+                                Rp1.999.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/nike4.avif">
+
+                        <div class="card-body">
+                            <h5>Nike Cortez Leather</h5>
+
+                            <p class="price">
+                                Rp2.299.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/nike 2.avif">
+
+                        <div class="card-body">
+                            <h5>Air Jordan 1 Low</h5>
+
+                            <p class="price">
+                                Rp1.999.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/nike3.avif">
+
+                        <div class="card-body">
+                            <h5>Air Jordan 1 Low</h5>
+
+                            <p class="price">
+                                Rp2.000.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma 1.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Ballet Mouse Grey</h5>
+
+                            <p class="price">
+                                Rp1.499.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma6.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Ballet Black</h5>
+
+                            <p class="price">
+                                Rp1.499.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma5.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Ballet Silver</h5>
+
+                            <p class="price">
+                                Rp1.499.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma7.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Ballet Dark Chocolate</h5>
+
+                            <p class="price">
+                                Rp1.499.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma10.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Unisex Red</h5>
+
+                            <p class="price">
+                                Rp1.799.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma9.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Unisex Navy</h5>
+
+                            <p class="price">
+                                Rp1.799.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma8.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Unisex Fresh Water-gum</h5>
+
+                            <p class="price">
+                                Rp1.799.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 8 -->
+                <div class="col-md-3 produk">
+                    <div class="card">
+                        <img src="/image/puma4.avif">
+
+                        <div class="card-body">
+                            <h5>Puma Speedcat Unisex Black</h5>
+
+                            <p class="price">
+                                Rp1.799.000,00
+                            </p>
+
+                            <button class="btn btn-urbankicks w-100" onclick="beli('Fashion Set')">
+                                Beli Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="py-4">
+
+        <div class="container text-center">
+
+            <h4>URBAN KICKS</h4>
+
+            <p>
+                Authentic Sneakers
+            </p>
+
+            <div class="mb-3">
+
+                <i class="bi bi-instagram fs-4 me-3"></i>
+                <i class="bi bi-facebook fs-4 me-3"></i>
+                <i class="bi bi-tiktok fs-4"></i>
+
+            </div>
+
+            <p>
+                © 2026 URBAN KICKS. Premium Style
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script>
+        function beli(nama) {
+            alert(nama + " berhasil ditambahkan ke keranjang!");
+        }
+
+        function cariProduk() {
+
+            let input =
+                document.getElementById("search")
+                    .value.toLowerCase();
+
+            let produk =
+                document.querySelectorAll(".produk");
+
+            produk.forEach(item => {
+
+                let nama =
+                    item.innerText.toLowerCase();
+
+                if (nama.includes(input)) {
+                    item.style.display = "block";
+                }
+                else {
+                    item.style.display = "none";
+                }
+
+            });
+
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
